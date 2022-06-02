@@ -39,8 +39,14 @@ for (let i = 1; i <= 10; i++)  {
     console.log (`A usted le corresponde el N° ${i} + Nombre  ${nombre} + " paciente de edad ${edad} años`)
 }
 
-
-
+let interes = 1.16;
+let iva = 1.21;
+let precioProducto = Number(prompt("Ingrese el valor del producto"));
+let cuotas  = Number(prompt("Ingrese la cantidad de cuotas"));
+let valorCuota = (precioProducto / cuotas ) * interes;
+let sumarIva =  valorCuota * iva
+let total = sumarIva
+        alert ( total );
 
 
 //                   Practica ejemplo
