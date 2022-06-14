@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display:grid;
+    grid-template-rows: 25% 25% 25% ;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.menu {
+    
+    
+}
+
+.div1{
+    background-color:rgb(107, 107, 241);
+    padding-bottom: 100vh;
+}
+
+a {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans;
+    font-size: 1.5rem;
+}
+
+
+li{
+    list-style:none;
+    display:inline-block;
+    margin-bottom: 1rem;
+    background-color: gray;
+    
+    
+}

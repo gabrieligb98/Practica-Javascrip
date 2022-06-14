@@ -88,3 +88,20 @@ function continuar(){
 }
 
 alert ("Muchas gracias por elegirnos!")
+
+
+
+const AUTOS =  ["civic","accord", "fit"];
+
+AUTOS.push (`Civic 00`);
+AUTOS.push (`Nsx 1990`);
+AUTOS.push (`Prelude`);
+
+console.log ( AUTOS[0]); 
+console.log ( AUTOS.length);
+console.log ( AUTOS.includes('Civic 00') );
+console.log ( AUTOS.includes('ONIX') );
+
+for (const automoviles of AUTOS){
+    console.log (AUTOS);  
+}
