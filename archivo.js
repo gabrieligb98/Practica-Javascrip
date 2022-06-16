@@ -91,11 +91,15 @@ alert ("Muchas gracias por elegirnos!")
 
 
 
-const AUTOS =  ["civic","accord", "fit"];
+const AUTOS =  [
+    {nombre:"civic", precio :400000 },
+    {nombre:"accord", precio :500000},
+    {nombre:"fit", precio :800000}
+];
 
-AUTOS.push (`Civic 00`);
-AUTOS.push (`Nsx 1990`);
-AUTOS.push (`Prelude`);
+AUTOS.push (`Civic 00`, 600000);
+AUTOS.push (`Nsx 1990`,1000000);
+AUTOS.push (`Prelude`,700000);
 
 console.log ( AUTOS[0]); 
 console.log ( AUTOS.length);
@@ -105,3 +109,17 @@ console.log ( AUTOS.includes('ONIX') );
 for (const automoviles of AUTOS){
     console.log (AUTOS);  
 }
+
+AUTOS.forEach((x)=>{
+    console.log(x)
+})
+
+const encontrarAuto = AUTOS.find (el => el.nombre==="civic");
+const encontrarAuto1 = AUTOS.find (el => el.precio==="ford");  // no se va a encontrar nada
+const encontrarAuto2 = AUTOS.find (el => el.precio>700000);
+
+console.log (encontrarAuto)
+console.log (encontrarAuto1)
+console.log (encontrarAuto2)
+
+
