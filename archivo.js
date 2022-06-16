@@ -123,3 +123,10 @@ console.log (encontrarAuto1)
 console.log (encontrarAuto2)
 
 
+const filtro = AUTOS.filter(el => el.nombre === "civic" );
+const filtro1 =AUTOS.filter(e => e.precio < 900000 );  // lo que si no entenderia es porque no muestra los autos que agrege con push
+
+console.log(filtro);
+console.log(filtro1);
+
+
