@@ -1,5 +1,6 @@
 //Alert de bienvenida
 
+
 let nombre = (prompt("Ingrese su nombre"));
 alert ( `Hola ${nombre} Bienvenido/a a la consecionaria de autos Honda `);
 
@@ -128,5 +129,6 @@ const filtro1 =AUTOS.filter(e => e.precio < 900000 );  // lo que si no entenderi
 
 console.log(filtro);
 console.log(filtro1);
+
 
 
