@@ -98,17 +98,18 @@ a {
 
 #boton-carrito {
     border: none;
-    color: royalblue;
-    font-size: 40px;
+    color: green;
+    font-size: 30px;
     background-color: white;
     border-radius: 50%;
     padding: 10px 20px;
     transition: all .3s;
+    margin-left:30rem;
 }
 #boton-carrito:hover {
     cursor: pointer;
     color: white;
-    background-color: royalblue;
+    background-color: rgba(228, 81, 13, 0.671);;
 }
 #boton-carrito:focus {
     outline: none;
@@ -133,7 +134,7 @@ p {
     font-weight: 700;
 }
 .btn-add {
-    background-color: royalblue;
+    background-color: green;
     color: white;
     font-size: 18px;
     font-weight: 700;
@@ -181,7 +182,7 @@ p {
 }
 
 .modal-carrito h3 {
-    color: royalblue;
+    color: rgba(228, 81, 13, 0.671);;
     padding-bottom: 5px;
 }
 .modal-carrito #carritoCerrar {
@@ -189,7 +190,7 @@ p {
     top: 15px;
     right: 15px;
     font-size: 20px;
-    color: royalblue;
+    color: red;
     border: none;
     background-color: white;
 }
@@ -229,5 +230,83 @@ p {
 }
 .boton-eliminar:focus {
     outline: none;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.titulo2 {
+    margin: 5vh auto 4vh 39vw;
+    color:rgba(228, 81, 13, 0.671);
+
 }
 
+
+.texto {
+    color:rgba(228, 81, 13, 0.671);;
+    margin-left: 5px;
+}
+
+.formulario__contacto {
+    margin:0 auto;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    color:black;
+    width:300px;
+    box-shadow: 7px 13px 337px; color:rgba(228, 81, 13, 0.671); ;
+    border: 10px;
+    border-radius: 30px;
+}
+
+.contact{
+padding: .8rem;
+overflow: hidden;
+color: #070707;
+}
+
+.contact label , .contact input , contact textarea{
+display:block;
+width: 100%;
+margin-bottom: 8px;
+}
+
+.contact label {
+font-weight: 700;
+}
+
+.contact input, .contact textarea {
+border:none;
+border-bottom: 2px solid; color:black ;
+margin-bottom: 10px;
+font-size: 20px;
+outline: none;
+}
+
+.btn, .btn__reset {
+    background-color:rgba(228, 81, 13, 0.671);
+    border-radius: 30px;
+}
+
+.contact textarea {
+    min-height: 100px;       
+}
+
+textarea {
+    width: 270px;
+}

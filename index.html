@@ -12,43 +12,100 @@
     <!-- por ahora no lo voy a agregar
     <script defer src="./archivo.js"></script>
     -->
+    <script defer src="./modal.js"></script>
     <script defer src="./stock.js"></script>
     <script defer src="prueba.js"></script>
 
 </head>
 
 <body>
-
+    
     <header>
         <span><img src="./img/hondaimagen2.jfif" class="img-logo"></span><h1 id="titulo" class="titulo"><b>ONDA</b></h1>
-        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contador">0</span></button>
     </header>
 
-    
+
+
     <div class="caja">
         <img src="./img/fotoruta.jpg">
-            <div class="texto1"><p class="welcome"><b>Bienvenido/a a la consecionaria</b></p></div>
-            <div class="texto2"><b class ="name"id="nombre_de_usuario"></b></div>
+           <div class="texto1"><p class="welcome"><b>Bienvenido/a a la consecionaria</b></p></div>
+        <div class="texto2"><b class ="name"id="nombre_de_usuario"></b></div>
     </div>
     
-
-    
-
     <div>
-    <main id="contenedor">
-    
-       <!-- lo dejo comentado para tener idea de como es el bloque 
-        <div class="producto">
-            <img src="./img/civic953.jpg" alt ="civic">
-            <h3>Civic</h3>
-            <p>Coupe</p>
-            <p>95</p>
-            <p class="precioProducto">Precio: $400000</p>
-            <button class="btn-add">Agregar <i class="fas fa-shopping-cart"></i></button>
-        </div>
-        -->
-    </main>
+        <main id="contenedor">  
+        <!-- lo dejo comentado para tener idea de como es el bloque 
+            <div class="producto">
+                <img src="./img/civic953.jpg" alt ="civic">
+                <h3>Civic</h3>
+                <p>Coupe</p>
+                <p>95</p>
+                <p class="precioProducto">Precio: $400000</p>
+                <button class="btn-add">Agregar <i class="fas fa-shopping-cart"></i></button>
+            </div> -->
+        </main>
     </div>
+
+
+<!-- MODAL -->
+
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito_contenedor">
+
+               <!-- aca va el modal -->
+
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciarCarrito" class="boton-eliminar">Vaciar carrito</button>
+        </div>
+    </div>
+
+
+
+    <!-- FORMULARIO -->
+
+
+    <section class="color__container">
+        <h2 class=" titulo2"> Solicitanos plan de pago </h2>
+        <div class="formulario__contacto">
+                <form class="contact" action="#" method="post">
+
+                        <label for="nombre"class="texto">Nombre</label>
+                        <input class="controls" id="nombre" type="text" name="nombre" placeholder="Ingresa un nombre" required>
+                    
+                        <label for="contraseña" class="texto">Contraseña</label>
+                        <input class="controls" id="contraseña" type="password" name="contraseña" placeholder="Crea una contraseña" required>
+                    
+                        <label for="mail" class="texto">Mail</label>
+                        <input class="controls" id="mail" type="Mail" name="mail" placeholder="Ingresa un mail" required>
+                    
+                        <label for="sexo" class="texto">Sexo</label>
+                            <select name="Sexo">
+                                <option value="" hidden>Seleccion una opcion</option>
+                                <option value="Hombre">Hombre</option>
+                                <option value="Mujer">Mujer</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                    
+                        <label for="comentario"></label>
+                        <textarea id="comentario" name="comentario" cols="30" rows="10"placeholder="Dejanos tu comentario"></textarea>
+                    
+                        
+                        <input class="btn" type="submit" value="Enviar">
+                        <input class="btn__reset" type="reset" value="Limpiar">
+            </form>        
+        </div>
+    </section>
+    
+
+    <footer> 
+        
+    </footer>
 </body>
 
 </html>
