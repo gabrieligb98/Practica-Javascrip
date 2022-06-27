@@ -22,15 +22,20 @@
     
     <header>
         <span><img src="./img/hondaimagen2.jfif" class="img-logo"></span><h1 id="titulo" class="titulo"><b>ONDA</b></h1>
-        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contador">0</span></button>
+            <div id="gestion">
+            <button id="recarga">Iniciar</button>
+            <button id="dolar">Dolar hoy = $128 </button>
+            <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contador">0</span></button>
+            </div>
     </header>
+
 
 
 
     <div class="caja">
         <img src="./img/fotoruta.jpg">
            <div class="texto1"><p class="welcome"><b>Bienvenido/a a la consecionaria</b></p></div>
-        <div class="texto2"><b class ="name"id="nombre_de_usuario"></b></div>
+        <div class="texto2"><b class ="name"id="nombre_usuario"></b></div>
     </div>
     
     <div>
@@ -60,7 +65,7 @@
                <!-- aca va el modal -->
 
             </div>
-            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0 USD</span></p>
             <button id="vaciarCarrito" class="boton-eliminar">Vaciar carrito</button>
         </div>
     </div>
@@ -73,31 +78,29 @@
     <section class="color__container">
         <h2 class=" titulo2"> Solicitanos plan de pago </h2>
         <div class="formulario__contacto">
-                <form class="contact" action="#" method="post">
+            <form class="contact" action="#" method="post">
 
-                        <label for="nombre"class="texto">Nombre</label>
-                        <input class="controls" id="nombre" type="text" name="nombre" placeholder="Ingresa un nombre" required>
+                <label for="nombre"class="texto">Nombre</label>
+                <input class="controls" id="nombre" type="text" name="nombre" placeholder="Ingresa un nombre" required>
                     
-                        <label for="contraseña" class="texto">Contraseña</label>
-                        <input class="controls" id="contraseña" type="password" name="contraseña" placeholder="Crea una contraseña" required>
                     
-                        <label for="mail" class="texto">Mail</label>
-                        <input class="controls" id="mail" type="Mail" name="mail" placeholder="Ingresa un mail" required>
+                <label for="mail" class="texto">Mail</label>
+                <input class="controls" id="mail" type="Mail" name="mail" placeholder="Ingresa un mail" required>
                     
-                        <label for="sexo" class="texto">Sexo</label>
-                            <select name="Sexo">
-                                <option value="" hidden>Seleccion una opcion</option>
-                                <option value="Hombre">Hombre</option>
-                                <option value="Mujer">Mujer</option>
-                                <option value="Otro">Otro</option>
-                            </select>
+                <label for="sexo" class="texto">Sexo</label>
+                    <select name="Sexo">
+                        <option value="" hidden>Seleccion una opcion</option>
+                        <option value="Hombre">Hombre</option>
+                        <option value="Mujer">Mujer</option>
+                        <option value="Otro">Otro</option>
+                    </select>
                     
-                        <label for="comentario"></label>
-                        <textarea id="comentario" name="comentario" cols="30" rows="10"placeholder="Dejanos tu comentario"></textarea>
+                <label for="comentario"></label>
+                <textarea id="comentario" name="comentario" cols="30" rows="5"placeholder="Dejanos tu comentario"></textarea>
                     
                         
-                        <input class="btn" type="submit" value="Enviar">
-                        <input class="btn__reset" type="reset" value="Limpiar">
+                <input class="btn" type="submit" value="Enviar">
+                <input class="btn__reset" type="reset" value="Limpiar">
             </form>        
         </div>
     </section>
