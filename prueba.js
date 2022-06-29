@@ -46,11 +46,14 @@ document.querySelector("#recarga").addEventListener('click', cleanLs)
 
 
 const productosContainer = document.querySelector('#contenedor');
-const carrito = [];
 const carritoContenedor = document.querySelector ('#carrito_contenedor');
 const carritoContador = document.querySelector ('#contador');
 const precioTotal = document.querySelector ('#precioTotal');
 const btnVaciar = document.querySelector ('#vaciarCarrito');
+let carrito 
+const carritoLS = JSON.parse (localStorage.getItem('carrito'));
+
+
 
 
 
@@ -86,6 +89,9 @@ stockAutos.forEach((items) =>{
 const addCar = (id) => {
     const bolsa = stockAutos.find ((producto) => producto.id === id);
     carrito.push(bolsa)
+    localStorage.setItem('carrito',JSON.stringify(carrito)),
+    
+    
     renderCarrito()
     controlCantidad()
     totalCarrito()
@@ -131,6 +137,8 @@ const totalCarrito = () => {
 }
 
 
+
+
 // funcion para borrar del carrito
 
 
@@ -138,6 +146,8 @@ const REMOVECARRITO = (id) => {
     const item = stockAutos.find((id)=>stockAutos.id === id)
     const indice = carrito.indexOf (item)
     carrito.splice(indice,1);
+
+    localStorage.setItem('carrito',JSON.stringify(carrito)),
     
     renderCarrito()
     controlCantidad()
@@ -150,11 +160,24 @@ const REMOVECARRITO = (id) => {
 
 const vaciarCarrito = () => {
     carrito.length = 0;
+   
+    localStorage.setItem('carrito',JSON.stringify(carrito)),
+
     renderCarrito()
     controlCantidad()
     totalCarrito()
 }
-
-
 btnVaciar.addEventListener('click', vaciarCarrito)
+
+
+if (carritoLS){
+    carrito = carritoLS
+    
+    renderCarrito()
+    controlCantidad()
+    totalCarrito()  
+}else {
+    carrito = []
+}
+// en este pienso aplicar el operador avanzado, pero no se me ocurre bien como.
 
