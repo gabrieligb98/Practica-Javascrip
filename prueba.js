@@ -92,6 +92,17 @@ const addCar = (id) => {
     localStorage.setItem('carrito',JSON.stringify(carrito)),
     
     
+   
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: `Has comprado Honda ${bolsa.modelo}`,
+        showConfirmButton: false,
+        timer: 1500
+        
+      })
+
+
     renderCarrito()
     controlCantidad()
     totalCarrito()
@@ -147,6 +158,24 @@ const REMOVECARRITO = (id) => {
     const indice = carrito.indexOf (item)
     carrito.splice(indice,1);
 
+
+    Toastify({
+        text: "has removido un articulo del carro de compras",
+        duration: 3000,
+        destination: "",
+        newWindow: true,
+        close: true,
+        gravity: "", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+
+
+
     localStorage.setItem('carrito',JSON.stringify(carrito)),
     
     renderCarrito()
@@ -162,6 +191,17 @@ const vaciarCarrito = () => {
     carrito.length = 0;
    
     localStorage.setItem('carrito',JSON.stringify(carrito)),
+
+
+    Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: `:( la consecionaria se lamenta tu decisión`,
+        showConfirmButton: false,
+        timer: 3000
+        
+      })
+
 
     renderCarrito()
     controlCantidad()
@@ -181,3 +221,31 @@ if (carritoLS){
 }
 // en este pienso aplicar el operador avanzado, pero no se me ocurre bien como.
 
+
+
+
+document.querySelector(".btn-add").addEventListener("click", function(){
+    this.style.backgroundColor = "red";
+    
+})
+// no se porque me toma solo una carta y es la primera . 
+
+
+
+
+
+// document.querySelector("".texto").addEventListener("click", validar) ; 
+// const validar = () => {
+//     const { value: email } = await Swal.fire({
+//         title: 'Input email address',
+//         input: 'email',
+//         inputLabel: 'Your email address',
+//         inputPlaceholder: 'Enter your email address'
+//     })
+    
+//     if (email) {
+//         Swal.fire(`Entered email: ${email}`)
+//     }
+// } 
+
+// por lo que vi utiliza async tengo pensado agregarlo al formulario
