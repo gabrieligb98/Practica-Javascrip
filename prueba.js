@@ -224,10 +224,17 @@ if (carritoLS){
 
 
 
-document.querySelector(".btn-add").addEventListener("click", function(){
-    this.style.backgroundColor = "red";
-    
-})
+const BOTONES = document.querySelectorAll(".btn-add");
+
+for(const boton of BOTONES){
+    boton.addEventListener("click", function(){
+        boton.style.backgroundColor = "blue";
+    })
+}
+
+// .addEventListener("click", function(){   
+//     this.style.backgroundColor = "red";    
+// })
 // no se porque me toma solo una carta y es la primera . 
 
 
