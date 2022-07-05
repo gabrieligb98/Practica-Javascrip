@@ -14,6 +14,15 @@ if (usuarioLs) {
 }
 
 
+// const cerrarModal = document.querySelector('#cerrar__modal');
+// const modal = document.querySelector('.modal');
+
+// cerrarModal.addEventListener('click', ()=>{
+   
+//     modal.classList.remove('modal--show')
+    
+// })
+
 
 // const title = document.querySelector("#nombre_usuario");
 // title.innerHTML = `${ usuario }`;

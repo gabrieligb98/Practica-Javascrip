@@ -159,7 +159,7 @@ body{
 .modal__close:hover {
     color: #f79605ab;
     background-color:#fff;
-    box-shadow: 10px 10px black;
+    
 }
 
 img {
@@ -217,11 +217,33 @@ main {
 }
 
  .caja {
-    margin-top: 10px;
-    margin-left:300px;
-    margin-right:300px;
-    margin-bottom:10px;
+    display:grid;
+    grid-template-columns: 4fr 4fr ;
+    gap:1rem;
+    padding:20px 0px 20px 0px;
 } 
+
+
+.div1 {
+    padding-left:2rem;
+    padding-bottom:12rem;
+    margin:auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:2rem;
+    color:#f26250
+    
+    
+}
+
+.oferton {
+    border-top:1px solid ;
+    color:black;
+}
+
+.div2 {
+    padding-left:2rem;
+    padding-right:0.5rem;
+}
 
 video {
     border-radius:10px;
