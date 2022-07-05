@@ -97,12 +97,14 @@ body{
     display:flex;
     opacity: 0;
     pointer-events:none;
+
+    
 }
 
 .modal--show {
     opacity:1;
     pointer-events: unset;
-    transition: opacity .6s;
+    ;
 }
 
 .modal__container {
@@ -117,6 +119,7 @@ body{
     gap: 1rem;
     place-items:center;
     grid-auto-columns:100%;
+    
 }
 
 .modal__title {
@@ -132,6 +135,15 @@ body{
     font-family:Verdana, Geneva, Tahoma, sans-serif; */
 }
 
+.name__usuario{
+    font-size: 25px;
+}
+
+.input {
+    padding:10px;
+    background-color: greey;
+}
+
 .modal__paragraph {
     margin-bottom:0.8rem;
 }
@@ -145,10 +157,10 @@ body{
 .modal__close {
     text-decoration: none;
     color:#fff;
-    background-color: #f26250;
+    background-color: #f79605ab;
     padding:10px 16px;
     border:1px solid black ;
-    border-radius:50%;
+    border-radius:10px;
     display: inline-block;
     font-weight:300;
     transition:background-color 3.s;
@@ -201,14 +213,14 @@ main {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border:transparent solid;
     border-radius: 30px;
-    color:green;
+    color:black;
 }
 
 #recarga {
     border:  solid transparent;
     border-radius: 150px;
     padding: 15px;
-    color:green;
+    color:black;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
 
 #recarga:hover {
@@ -242,15 +254,16 @@ main {
 }
 
 .btn__contactanos {
-    margin-left:15rem;
+    margin-left:18rem;
     margin-top: 5rem;
-    box-shadow: 3px 3px 15px #999;
+    box-shadow: 3px 3px 55px #999;
     border:5px;
-    font-size:0.8em;
+    font-size:1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans;
     border-radius: 10px;
     padding:20px;
     text-decoration: none;
+    
 }
 
 .btn__contactanos:hover {
