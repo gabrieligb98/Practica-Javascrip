@@ -226,7 +226,7 @@ main {
 
 .div1 {
     padding-left:2rem;
-    padding-bottom:12rem;
+    padding-bottom:1rem;
     margin:auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size:2rem;
@@ -236,8 +236,25 @@ main {
 }
 
 .oferton {
-    border-top:1px solid ;
+    
     color:black;
+    border-radius: 10px;
+}
+
+.btn__contactanos {
+    margin-left:15rem;
+    margin-top: 5rem;
+    box-shadow: 3px 3px 15px #999;
+    border:5px;
+    font-size:0.8em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans;
+    border-radius: 10px;
+    padding:20px;
+    text-decoration: none;
+}
+
+.btn__contactanos:hover {
+    cursor:pointer;
 }
 
 .div2 {
@@ -248,6 +265,17 @@ main {
 video {
     border-radius:10px;
 }
+
+
+.div3 {
+    margin-top:8%;
+    margin-bottom:8%;
+    margin-left:50%;
+}
+
+
+
+
 .texto1 {
     display:flex;
     
