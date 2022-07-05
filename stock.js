@@ -21,3 +21,37 @@ let totalEnUsdOficial = (autos,valorActual) => {
 totalEnUsdOficial(stockAutos,valorDolar)
 
 
+
+
+//          si lo hiciera mediante una funcion constructora 
+
+
+
+// function auto(id, modelo, anio, des, estado, img ) {
+//     this.id = id;
+//     this.model 	 = modelo;
+//     this.anio  = anio;
+//     this.des = des;
+//     this.estado = estado;  
+//     this.img = img; 
+// }   
+
+// o mediante una clase constructora 
+
+
+// class autos{
+//     constructor(id, modelo, anio, des, estado, img ) {
+//     this.id = id;
+//     this.model 	 = modelo;
+//     this.anio  = anio;
+//     this.des = des;
+//     this.estado = estado;  
+//     this.img = img; 
+// }   
+
+
+// const civic = new auto("1", "civic", 1995, "coupe" , "usado" , './img/civic953.jpg');
+// const accord = new auto("2", "Accord", 2002, "sedan" , "usado" , './img/./img/accord9802.png.jpg');
+
+// console.log(civic)
+

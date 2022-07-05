@@ -12,6 +12,7 @@
     <!-- por ahora no lo voy a agregar
     <script defer src="./archivo.js"></script>
     -->
+    <script defer src="./modal_entrada.js"></script>
     <script defer src="./modal.js"></script>
     <script defer src="./stock.js"></script>
     <script defer src="prueba.js"></script>
@@ -21,23 +22,57 @@
 </head>
 
 <body>
+
+ 
+    <!-- MODAL DE ENTRADA --> 
+
+        <!-- <imput type="checkbox" id="cerrar">
+            <imput >
+        <label for="cerrar" id="boton__cerrar">X</label>
+        <div class="modal">
+            <div class="contenido">
+                <h2> Bienvenido a la tienda                                                                                                 </h2>
+                <img src="./img/civic2008.jpg"> 
+            </div>
+        </div> -->
     
+
     <header>
         <span><img src="./img/hondaimagen2.jfif" class="img-logo"></span><h1 id="titulo" class="titulo"><b>ONDA</b></h1>
             <div id="gestion">
             <button id="recarga">Iniciar</button>
-            <button id="dolar">Dolar hoy = $128 </button>
+            <button id="dolar">Dolar hoy = $130 </button>
             <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contador">0</span></button>
             </div>
     </header>
 
+     
+<!--    <imput type="checkbox" id="cerrar"><imput >
+        <label for="cerrar" id="boton__cerrar">X</label> -->
 
+ 
+    <div class="modal modal--show">
+        <div class="modal__container">
+            <img src="./img/MODAL.png" class="modal__img">   
+            <h2 class="modal__title"> BIENVENIDOS !!</h2>
+                <form >
+                    <label for="iname"> Ingrese su Nombre</label>
+                    <input type="text" name="name" id="iname">
+                </form>    
+                <p class="modal__paragraph"> Gracias por ingresar, contactanos para acesorarte</p>
+                <button type="button" id="cerrar__modal" cursor="pointer" role="button"class="modal__close">X</button>                                                                                             </h2>
+        </div>
+    </div>
+    
 
 
     <div class="caja">
-        <img src="./img/fotoruta.jpg">
-           <div class="texto1"><p class="welcome"><b>Bienvenido/a a la consecionaria</b></p></div>
-        <div class="texto2"><b class ="name"id="nombre_usuario"></b></div>
+        <video src="./videos/NECESITAS_UN_3.mp4" autoplay muted loop width="100%"></video>
+     
+        <!-- <img src="./img/fotoruta.jpg"> -->
+            <!-- <div class="texto1"><p class="welcome"><b>Bienvenidos a la consecionaria!!</b></p></div>
+           <imput type="text" id="holaa">
+        <div class="texto2"><b class ="name"id="nombre_usuario"></b></div>   -->
     </div>
     
     <div>
@@ -102,11 +137,12 @@
                         
                 <input class="btn" type="submit" value="Enviar">
                 <input class="btn__reset" type="reset" value="Limpiar">
-            </form>        
+            </form> 
         </div>
     </section>
 
 
+    
 
     <footer> 
        

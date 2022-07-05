@@ -9,17 +9,19 @@ const usuarioLs = localStorage.getItem('user')
 if (usuarioLs) {
     usuario =  usuarioLs
 }else {
-        usuario = prompt("Ingrese su Nombre de usuario");
-        localStorage.setItem('user', usuario);
+        const nombreUsuario = document.querySelector("#holaa")
+        localStorage.setItem('user', nombreUsuario);
 }
 
-const title = document.querySelector("#nombre_usuario");
-title.innerHTML = `${ usuario }`;
-const cleanLs = () =>{
-    localStorage.removeItem('user');
-    window.location.reload();
-}
-document.querySelector("#recarga").addEventListener('click', cleanLs)
+
+
+// const title = document.querySelector("#nombre_usuario");
+// title.innerHTML = `${ usuario }`;
+// const cleanLs = () =>{
+//     localStorage.removeItem('user');
+//     window.location.reload();
+// }
+// document.querySelector("#recarga").addEventListener('click', cleanLs)
 
 
 
@@ -210,16 +212,30 @@ const vaciarCarrito = () => {
 btnVaciar.addEventListener('click', vaciarCarrito)
 
 
-if (carritoLS){
+
+
+// if (carritoLS){
+//     carrito = carritoLS
+    
+//     renderCarrito()
+//     controlCantidad()
+//     totalCarrito()  
+// }else {
+//     carrito = []
+// }
+
+function carritoLsOkey () {
     carrito = carritoLS
     
     renderCarrito()
     controlCantidad()
-    totalCarrito()  
-}else {
-    carrito = []
+    totalCarrito() 
 }
-// en este pienso aplicar el operador avanzado, pero no se me ocurre bien como.
+
+// OPERADOR AVANZADO
+
+carritoLS ? carritoLsOkey () : carrito = []
+
 
 
 
