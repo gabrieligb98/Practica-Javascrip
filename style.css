@@ -157,7 +157,7 @@ body{
 .modal__close {
     text-decoration: none;
     color:#fff;
-    background-color: #f79605ab;
+    background-color: red;
     padding:10px 16px;
     border:1px solid black ;
     border-radius:10px;
@@ -170,7 +170,7 @@ body{
 
 .modal__close:hover {
     color: #f79605ab;
-    background-color:#fff;
+    background-color:black;
     
 }
 

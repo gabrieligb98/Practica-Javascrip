@@ -9,9 +9,12 @@ const usuarioLs = localStorage.getItem('user')
 if (usuarioLs) {
     usuario =  usuarioLs
 }else {
-        const nombreUsuario = document.querySelector("#holaa")
+        const nombreUsuario = document.getElementById("#iname")
         localStorage.setItem('user', nombreUsuario);
 }
+
+
+
 
 
 // const cerrarModal = document.querySelector('#cerrar__modal');
