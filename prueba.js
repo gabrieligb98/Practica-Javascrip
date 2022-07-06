@@ -16,7 +16,6 @@ if (usuarioLs) {
 
 
 
-
 // const cerrarModal = document.querySelector('#cerrar__modal');
 // const modal = document.querySelector('.modal');
 
