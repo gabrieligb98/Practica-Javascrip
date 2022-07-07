@@ -3,27 +3,58 @@
 // let usuario = document.getElementById("nombre_usuario")
 // usuario.innerHTML = prompt("Ingrese su nombre de usuario")
 
-let usuario
-const usuarioLs = localStorage.getItem('user')
+// let usuario
+// const usuarioLs = localStorage.getItem('user')
 
-if (usuarioLs) {
-    usuario =  usuarioLs
-}else {
-        const nombreUsuario = document.getElementById("#iname")
-        localStorage.setItem('user', nombreUsuario);
-}
-
-
+// if (usuarioLs) {
+//     usuario =  usuarioLs
+// }else {
+//         const nombreUsuario = document.getElementById("#iname")
+//         localStorage.setItem('user', nombreUsuario);
+// }
 
 
-// const cerrarModal = document.querySelector('#cerrar__modal');
-// const modal = document.querySelector('.modal');
 
-// cerrarModal.addEventListener('click', ()=>{
-   
-//     modal.classList.remove('modal--show')
+
+
+
+const conseguirValorInput = () =>{
+    let inputValue  = document.getElementById("iname").value; 
+    document.getElementById("tutexto").innerHTML = inputValue; 
+    localStorage.setItem('user', inputValue);
+
+    // let personal = localStorage.getItem('usuarios'); 
+    // let guardarValor = []
+    // let user = null;
+    // class usuarios {
+    //     constructor(usuario,carrito){
+    //         this.usuario = usuario;
+    //         this.carrito = carrito;  
+    //     }
+    // }
     
-// })
+    // if (personal == "") {
+    //     const user = new usuarios ("admin",localStorage.getItem('carrito'));
+    //     guardarValor.push(user);
+    //     localStorage.setItem('usuarios',JSON.stringify(guardarValor));
+    // } else {
+    //     guardarValor = localStorage.getItem('usuarios');
+    // }
+    
+    // for ( cliente of guardarValor){
+    //     if ( inputValue == cliente.usuarios){
+    //         localStorage.setItem('user',JSON.stringify(cliente));
+    //     }else {
+    //         user = new usuarios (inputValue,localStorage.getItem('carrito'));
+    //         guardarValor.push(user);
+    //     }
+    //     console.log(user)
+    // }
+    
+    // localStorage.setItem('usuarios', JSON.stringify(guardarValor));
+    
+
+  }
 
 
 // const title = document.querySelector("#nombre_usuario");

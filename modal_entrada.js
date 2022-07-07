@@ -10,5 +10,6 @@ cerrarModal.addEventListener('click', ()=>{
 document.getElementById('iname').addEventListener('keypress',(e)=>{
     if (e.key === 'Enter') {
         modal.classList.remove('modal--show');
+        conseguirValorInput()
     }
 })
