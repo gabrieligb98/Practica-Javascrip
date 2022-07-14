@@ -97,31 +97,38 @@ const btnVaciar = document.querySelector ('#vaciarCarrito');
 let carrito 
 const carritoLS = JSON.parse (localStorage.getItem('carrito'));
 
+let stock = []
 
 
 
-
-//        Agregar tarjetas o card a la pagina
-
+    //        Agregar tarjetas o card a la pagina
+    
 
 //                  Funciones 
-
-stockAutos.forEach((items) =>{
-    const div = document.createElement('div');
+fetch('/data.json')
+    .then( (res) => res.json())
+    .then( (data) => {
+        stock = data
+        stock.forEach((items) => {
+            const div = document.createElement('div');
     div.classList.add('producto');
-
     div.innerHTML = `
-                <img src=${items.img} alt ="civic">
-                <h3><b>Modelo: </b>${items.modelo}</h3>
-                <p>${items.des}</p>
-                <p>Año: <b>${items.anio}</b></p>
-                <p class="precioProducto">Precio: $ ${items.precio} USD</p>
-                <p> Estado: <b>${items.estado}</b></p>
-                <button onClick ="addCar(${items.id})" class="btn-add">Agregar <i class="fas fa-shopping-cart"></i></button>
-            `
+    <img src=${items.img} alt ="civic">
+    <h3><b>Modelo: </b>${items.modelo}</h3>
+    <p>${items.des}</p>
+    <p>Año: <b>${items.anio}</b></p>
+    <p class="precioProducto">Precio: $ ${items.precio} USD</p>
+    <p> Estado: <b>${items.estado}</b></p>
+    <button onClick ="addCar(${items.id})" class="btn-add">Agregar <i class="fas fa-shopping-cart"></i></button>
+    `
+    
+    contenedor.append(div)
+ 
+            
+        })
+    })
 
-        contenedor.append(div)
-})
+
 
 
 
@@ -131,7 +138,7 @@ stockAutos.forEach((items) =>{
 
 
 const addCar = (id) => {
-    const bolsa = stockAutos.find ((producto) => producto.id === id);
+    const bolsa = stock.find ((producto) => producto.id === id);
     carrito.push(bolsa)
     localStorage.setItem('carrito',JSON.stringify(carrito)),
     
@@ -198,7 +205,7 @@ const totalCarrito = () => {
 
 
 const REMOVECARRITO = (id) => {  
-    const item = stockAutos.find((id)=>stockAutos.id === id)
+    const item = stock.find((id)=>stock.id === id)
     const indice = carrito.indexOf (item)
     carrito.splice(indice,1);
 
@@ -313,4 +320,4 @@ for(const boton of BOTONES){
 //     }
 // } 
 
-// por lo que vi utiliza async tengo pensado agregarlo al formulario
+// por lo que vi utiliza async tengo pensado agregarlo al formulario 
