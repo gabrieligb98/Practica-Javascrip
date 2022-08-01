@@ -12,41 +12,33 @@
     <!-- por ahora no lo voy a agregar
     <script defer src="./archivo.js"></script>
     -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script defer src="./modal_entrada.js"></script>
     <script defer src="./modal.js"></script>
-    <script defer src="./stock.js"></script>
     <script defer src="./prueba.js"></script>
+    <script defer src="./stock.js"></script>
     <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./fontawesome-free-6.1.2-web/css/all.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 
 <body>
 
- 
-    <!-- MODAL DE ENTRADA --> 
-
-        <!-- <imput type="checkbox" id="cerrar">
-            <imput >
-        <label for="cerrar" id="boton__cerrar">X</label>
-        <div class="modal">
-            <div class="contenido">
-                <h2> Bienvenido a la tienda                                                                                                 </h2>
-                <img src="./img/civic2008.jpg"> 
-            </div>
-        </div> -->
     
-
+    <div id="particles-js"></div>
     <header>
-        <span><img src="./img/hondaimagen2.jfif" class="img-logo"></span><h1 id="titulo" class="titulo"><b>ONDA</b></h1>
-            <div id="gestion">
-            <button id="recarga">Iniciar</button>
-            <button id="dolar">Dolar hoy = $132 </button>
-            <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contador">0</span></button>
+        <h1 id="titulo" class="titulo"><b>Consecionaria Honda</b></h1>
+            <div id="gestion">     
+                <button id="changeColor" class="changeColor"> 
+                    <span><i class="fa-solid fa-sun"></i></span>
+                    <span><i class="fa-solid fa-moon"></i></span>
+                </button>
+                <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contador">0</span></button>
             </div>
-    </header>
 
-     
+    </header>
+    
 <!--    <imput type="checkbox" id="cerrar"><imput >
         <label for="cerrar" id="boton__cerrar">X</label> -->
 
@@ -85,11 +77,6 @@
 
         </div>
          
-     
-        <!-- <img src="./img/fotoruta.jpg"> -->
-            <!-- <div class="texto1"><p class="welcome"><b>Bienvenidos a la consecionaria!!</b></p></div>
-           <imput type="text" id="holaa">
-        <div class="texto2"><b class ="name"id="nombre_usuario"></b></div>   -->
     </div>
     
     <div>
@@ -132,10 +119,10 @@
     <section class="color__container">
         <h2 class=" titulo2"> Solicitanos plan de pago </h2>
         <div class="formulario__contacto" id="contactanos">
-            <form class="contact" action="#" method="post">
+            <form class="contact" name="formulario" action="" method="get" id="formulario">
 
                 <label for="nombre"class="texto">Nombre</label>
-                <input class="controls" id="nombre" type="text" name="nombre" placeholder="Ingresa un nombre" required>
+                <input class="controls" id="nombre" type="text" name="nombre" maxlength="20" placeholder="Ingresa un nombre" required>
                     
                     
                 <label for="mail" class="texto">Mail</label>
@@ -150,10 +137,12 @@
                     </select>
                 <label for="comentario"></label>
                 <textarea id="comentario" name="comentario" cols="30" rows="5"placeholder="Dejanos tu comentario"></textarea>
-                    
+                
+                <input type="file" class="input__selector" > 
                         
-                <input class="btn" type="submit" value="Enviar">
-                <input class="btn__reset" type="reset" value="Limpiar">
+                <input type="submit" class="btn"  value="Enviar"  id="enviar">
+                
+                <input type="reset" class="btn__reset" value="Limpiar">
             </form> 
         </div>
     </section>
@@ -161,9 +150,25 @@
 
     
 
-    <footer> 
-       <img src="./img/foot.jpeg"> <!-- imagen provicional hasta poder dedicarle tiempo a hacer un foot-->
+    <footer class="footer"> 
+        <h2 class="footer__titulo">
+          ¡Contactanos!
+        </h2>
+        <h3 class="footer__titulo-sub">
+           Todos los derechos reservados!
+        </h3>
+        <span class="footerFollows"> 
+            <i class="fa-brands fa-twitter">Consecionaria.honda</i>
+        </span>
+        <span class="footerFollows"> 
+            <i class="fa-brands fa-instagram">Conses.HONDA</i>
+        </span >
+        <span class="footerFollows"> 
+            <i class="fa-brands fa-facebook">HONDA consecionaria</i>
+        </span>
+
     </footer>
+    <script src="particles.js"></script>
 </body>
 
 </html>

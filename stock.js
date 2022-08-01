@@ -3,24 +3,20 @@
 
 
 
-// fetch('/data.json')
-//     .then( (res) => res.json())
-//     .then( (data) => {
-// console.log(data)
-        
-//     })
 
 
+// Habia creado un boton del dolar que cotizaba en base al valor actual pero decidi eliminarlo
+// y quedo esta funcion de como iba a ser
 
-// const valorDolar = 1.76
-// let totalEnUsdOficial = (autos,valorActual) => {
-//     //let encontrar = stockAutos.find((producto) => producto.id === id);
-//     //encontrar.precio = encontrar.precio *1.30 *1.35
+const valorDolar = 1.76
 
-//     autos.forEach((producto) => {producto.precio = Math.round(producto.precio*valorActual)})     
-// }
-// totalEnUsdOficial(stock,valorDolar)
+let totalEnUsdOficial = (autos,valorActual) => {
+    //let encontrar = stockAutos.find((producto) => producto.id === id);
+    //encontrar.precio = encontrar.precio *1.30 *1.35
 
+    autos.forEach((producto) => {producto.precio = Math.round(producto.precio*valorActual)})     
+}
+totalEnUsdOficial(stock,valorDolar)
 
 
 

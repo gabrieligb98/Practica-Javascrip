@@ -1,17 +1,4 @@
-//          mas adelante quiero agregar la forma de colocar el nombre pero sin el prompt
 
-// let usuario = document.getElementById("nombre_usuario")
-// usuario.innerHTML = prompt("Ingrese su nombre de usuario")
-
-// let usuario
-// const usuarioLs = localStorage.getItem('user')
-
-// if (usuarioLs) {
-//     usuario =  usuarioLs
-// }else {
-//         const nombreUsuario = document.getElementById("#iname")
-//         localStorage.setItem('user', nombreUsuario);
-// }
 
 
 
@@ -23,69 +10,8 @@ const conseguirValorInput = () =>{
     document.getElementById("tutexto").innerHTML = inputValue; 
     localStorage.setItem('user', inputValue);
 
-    // let personal = localStorage.getItem('usuarios'); 
-    // let guardarValor = []
-    // let user = null;
-    // class usuarios {
-    //     constructor(usuario,carrito){
-    //         this.usuario = usuario;
-    //         this.carrito = carrito;  
-    //     }
-    // }
-    
-    // if (personal == "") {
-    //     const user = new usuarios ("admin",localStorage.getItem('carrito'));
-    //     guardarValor.push(user);
-    //     localStorage.setItem('usuarios',JSON.stringify(guardarValor));
-    // } else {
-    //     guardarValor = localStorage.getItem('usuarios');
-    // }
-    
-    // for ( cliente of guardarValor){
-    //     if ( inputValue == cliente.usuarios){
-    //         localStorage.setItem('user',JSON.stringify(cliente));
-    //     }else {
-    //         user = new usuarios (inputValue,localStorage.getItem('carrito'));
-    //         guardarValor.push(user);
-    //     }
-    //     console.log(user)
-    // }
-    
-    // localStorage.setItem('usuarios', JSON.stringify(guardarValor));
-    
-
   }
 
-
-// const title = document.querySelector("#nombre_usuario");
-// title.innerHTML = `${ usuario }`;
-// const cleanLs = () =>{
-//     localStorage.removeItem('user');
-//     window.location.reload();
-// }
-// document.querySelector("#recarga").addEventListener('click', cleanLs)
-
-
-
-
-//  quiero ver como vincular el email con la base de datos
-
-
-// let input2  = document.getElementById("mail");
-// input2.onchange = () => {console.log("valor2")};
-// let input1  = document.getElementById("nombre")
-// input1.addEventListener('input', () => {
-// console.log(input1.value)
-// })
-
-
-// let miFormulario      = document.getElementById("formulario");
-// miFormulario.addEventListener("submit", validarFormulario);
-
-// function validarFormulario(e){
-//     e.preventDefault();
-//     console.log("Formulario Enviado");    
-// }
 
 
 
@@ -96,8 +22,8 @@ const precioTotal = document.querySelector ('#precioTotal');
 const btnVaciar = document.querySelector ('#vaciarCarrito');
 let carrito 
 const carritoLS = JSON.parse (localStorage.getItem('carrito'));
-
 let stock = []
+const btnChangeColor = document.querySelector ('#changeColor');
 
 
 
@@ -199,8 +125,6 @@ const totalCarrito = () => {
 }
 
 
-
-
 // funcion para borrar del carrito
 
 
@@ -247,7 +171,7 @@ const vaciarCarrito = () => {
     Swal.fire({
         position: 'center',
         icon: 'error',
-        title: `:( la consecionaria se lamenta tu decisión`,
+        title: `Has eliminado todo tu carrito`,
         showConfirmButton: false,
         timer: 3000
         
@@ -260,18 +184,6 @@ const vaciarCarrito = () => {
 }
 btnVaciar.addEventListener('click', vaciarCarrito)
 
-
-
-
-// if (carritoLS){
-//     carrito = carritoLS
-    
-//     renderCarrito()
-//     controlCantidad()
-//     totalCarrito()  
-// }else {
-//     carrito = []
-// }
 
 function carritoLsOkey () {
     carrito = carritoLS
@@ -286,7 +198,7 @@ function carritoLsOkey () {
 carritoLS ? carritoLsOkey () : carrito = []
 
 
-
+// 
 
 
 const BOTONES = document.querySelectorAll(".btn-add");
@@ -296,28 +208,136 @@ for(const boton of BOTONES){
         boton.style.backgroundColor = "blue";
     })
 }
+ 
 
-// .addEventListener("click", function(){   
-//     this.style.backgroundColor = "red";    
-// })
-// no se porque me toma solo una carta y es la primera . 
-
+let addPhoto = document.querySelector(".input__selector")
+addPhoto.accept = "image/jpeg"
 
 
+let ingreso = document.querySelector("#nombre")
+ingreso.minLength = 2;
 
 
-// document.querySelector("".texto").addEventListener("click", validar) ; 
-// const validar = () => {
-//     const { value: email } = await Swal.fire({
-//         title: 'Input email address',
-//         input: 'email',
-//         inputLabel: 'Your email address',
-//         inputPlaceholder: 'Enter your email address'
-//     })
-    
-//     if (email) {
-//         Swal.fire(`Entered email: ${email}`)
-//     }
-// } 
+function changeBackgroundColor () {
+    let body = document.getElementsByTagName('body')[0];
+    body.style.backgroundColor = 'black';
+}
 
-// por lo que vi utiliza async tengo pensado agregarlo al formulario 
+
+
+particlesJS (
+    {
+        "particles": {
+            "number": {
+              "value": 50,
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": {
+              "value": "#000000"
+            },
+            "shape": {
+              "type": "edge",
+              "stroke": {
+                "width": 0,
+                "color": "#c0721a"
+              },
+              "polygon": {
+                "nb_sides": 5
+              },
+              "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+              }
+            },
+            "opacity": {
+              "value": 0.5,
+              "random": false,
+              "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+              }
+            },
+            "size": {
+              "value": 5,
+              "random": true,
+              "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+              }
+            },
+            "line_linked": {
+              "enable": true,
+              "distance": 150,
+              "color": "#ffffff",
+              "opacity": 0.4,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 4,
+              "direction": "top",
+              "random": false,
+              "straight": false,
+              "out_mode": "bounce",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+              }
+            }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "repulse"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "push"
+              },
+              "resize": true
+            },
+            "modes": {
+              "grab": {
+                "distance": 400,
+                "line_linked": {
+                  "opacity": 1
+                }
+              },
+              "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+              },
+              "repulse": {
+                "distance": 200,
+                "duration": 0.4
+              },
+              "push": {
+                "particles_nb": 4
+              },
+              "remove": {
+                "particles_nb": 2
+              }
+            }
+          },
+          "retina_detect": true
+})
+
+btnChangeColor.addEventListener('click',()=>{
+  document.body.classList.toggle('dark');
+});
+

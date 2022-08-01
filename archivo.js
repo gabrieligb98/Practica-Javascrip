@@ -1,6 +1,13 @@
 //Alert de bienvenida
 
 
+
+// Esta fue creado al principio del curso como boceto o idia inicial para un e-commerce que interactue con nosotros 
+
+
+
+
+
 let nombre = (prompt("Ingrese su nombre"));
 alert ( `Hola ${nombre} Bienvenido/a a la consecionaria de autos Honda `);
 
